@@ -1,0 +1,621 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --yellow: #E2E046;
+    --blue: #113759;
+    --white: #F3F3F3;
+    --black: black;
+    --orange: #F37343;
+
+    --acqua: #3EBDB2;
+
+}
+
+body,
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    cursor: none;
+
+}
+
+/* Remove a borda e personaliza a cor do fundo */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra de rolagem */
+}
+
+/* Cor da trilha (fundo da barra) */
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    /* Troque pela cor desejada */
+    border-radius: 5px;
+    border: none;
+    /* Remove qualquer borda */
+}
+
+/* Cor da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    /* Cor da barra de rolagem */
+    border-radius: 5px;
+    /* Deixa as bordas arredondadas */
+    border: none;
+    /* Remove qualquer borda */
+}
+
+/* Quando o usuário passa o mouse sobre a barra */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+}
+
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, var(--orange) 0%, var(--yellow) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out;
+}
+
+@mixin DisplayFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+#ctaBtn {
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 40px;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    animation: pulseEffect 1.5s infinite ease-out;
+}
+
+
+header {
+    width: 100%;
+    background-color: var(--blue);
+    @include DisplayFlex(row, center, center);
+    gap: 10px;
+    position: fixed;
+    z-index: 200;
+    padding: 10px;
+
+    span {
+        font-weight: bolder;
+        color: var(--yellow);
+    }
+
+    img {
+        width: 100px;
+
+    }
+
+    .Line {
+        width: 2px;
+        height: 25px;
+        background-color: var(--yellow);
+        margin-top: 10px;
+    }
+
+    .euLideroLogo {
+        margin-top: 10px;
+        width: 140px;
+
+    }
+
+}
+
+
+#home {
+    background: url(./../assets/bg-home.webp) no-repeat center / cover;
+
+    gap: 5%;
+
+    padding: 5% 100px;
+    @include DisplayFlex(row, center, center);
+
+    margin-top: 70px;
+
+    article {
+        max-width: 550px;
+        @include DisplayFlex(column, center, start);
+        gap: 20px;
+
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: bold;
+            color: var(--blue);
+        }
+
+        p {
+            font-weight: bold;
+            color: var(--blue);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+        }
+
+        a {
+            margin-top: 50px;
+            width: 80%;
+
+        }
+    }
+
+    .container-video {
+
+        @include DisplayFlex(column, center, center);
+        gap: 30px;
+
+        iframe {
+            border-radius: 10px;
+            border: 3px solid --white;
+        }
+
+        .container-selos {
+            @include DisplayFlex(row, center, center);
+            gap: 20px;
+        }
+    }
+}
+
+#form-section {
+
+    h2 {
+        font-size: clamp(1rem, 3vw, 2rem);
+        color: var(--white);
+        text-align: center;
+        padding: 60px 10px;
+    }
+
+    background: url(./../assets/bgOrange.png) no-repeat center / cover;
+
+    @include DisplayFlex(column, center, center);
+
+    .containerIntern {
+
+
+        width: 100%;
+        @include DisplayFlex(row, center, center);
+        gap: 10%;
+
+
+        .container-impacts {
+            @include DisplayFlex(column, center, center);
+            gap: 20px;
+
+            .content-box-impact {
+                animation: suavidade 1s linear infinite;
+                background-color: var(--acqua);
+                border: 1px solid var(--blue);
+                border-radius: 10px;
+                width: 300px;
+                text-align: center;
+                padding: 10px;
+                min-height: 80px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+                p {
+                    color: var(--blue);
+                    font-size: 16px;
+                }
+
+                span {
+
+                    font-weight: bold;
+                    color: white;
+                    font-size: 30px;
+
+                }
+            }
+
+            .content-box-impact:nth-child(3) {
+                p {
+                    color: var(--white);
+                    font-size: 20px;
+                }
+
+                span {
+                    color: var(--blue);
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+
+}
+
+#section3 {
+    background: url(./../assets/bg2.webp) no-repeat center / cover;
+    @include DisplayFlex(row, center, center);
+    gap: 10%;
+
+    padding: 30px 10px;
+
+    img {
+        width: min(450px, 80%);
+    }
+
+    article {
+        @include DisplayFlex(column, center, start);
+        gap: 10px;
+        max-width: 500px;
+
+        h2 {
+            font-size: clamp(1rem, 3vw, 2rem);
+            color: var(--blue);
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--blue);
+        }
+
+        a {
+            width: 90%;
+            margin-top: 20px;
+        }
+
+    }
+}
+
+
+#section4 {
+    @include DisplayFlex(column, center, center);
+    background-color: var(--blue);
+
+    padding-top: 40px;
+
+    img {
+        width: min(600px, 80%);
+        margin-bottom: -70px;
+    }
+
+    .containerWrap {
+        @include DisplayFlex(row, center, center);
+
+    }
+
+    article {
+        @include DisplayFlex(column, center, start);
+        gap: 30px;
+
+        span {
+            font-size: 25px;
+            margin-left: -20px;
+
+        }
+    }
+
+    h2 {
+        font-size: clamp(1rem, 3vw, 2rem);
+        color: var(--white);
+
+        span {
+            color: var(--yellow);
+        }
+    }
+
+    a {
+        background-color: var(--blue);
+        border: 1px solid var(--yellow);
+        width: 90%;
+    }
+
+    .containerInternArticle {
+
+        @include DisplayFlex(column, center, start);
+        gap: 10px;
+
+        li {
+            color: var(--white);
+            font-weight: 400;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        span {
+            font-weight: bold;
+            color: var(--yellow);
+        }
+
+        .paraAlunos {
+            color: var(--orange);
+
+        }
+    }
+}
+
+#section5 {
+    background-color: var(--orange);
+    padding: 80px 10px;
+
+    .containerWrap {
+        @include DisplayFlex(row, center, center);
+        gap: 20px;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    .containerInfos {
+
+        &:hover {
+            animation: pulseEffect 0.6s ease-out;
+        }
+
+        padding: 10px;
+        text-align: center;
+        height: 130px;
+
+        width: 280px;
+        border: 2px solid var(--yellow);
+        border-radius: 10px;
+        @include DisplayFlex(column, center, center);
+        animation: pulseEffect 3s ease-in-out infinite;
+
+
+        p {
+            color: var(--white);
+        }
+    }
+
+    .containerInfos:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .containerInfos:nth-child(2) {
+        animation-delay: 1.5s;
+    }
+
+    .containerInfos:nth-child(3) {
+        animation-delay: 3s;
+    }
+
+
+}
+
+#section6 {
+    background: url(./../assets/bg.webp) no-repeat center / cover;
+    @include DisplayFlex(column, center, center);
+    gap: 40px;
+    padding: 50px 10px;
+
+    iframe {
+        border-radius: 10px;
+        border: 2px solid var(--white);
+    }
+
+    span {
+        color: var(--orange);
+        animation: colorChange 7s infinite linear;
+    }
+
+    h3 {
+        color: var(--blue);
+        font-size: clamp(1rem, 3vw, 2rem);
+        text-align: center;
+
+    }
+
+    a {
+        width: 50%;
+    }
+}
+
+footer {
+
+    .containerFooter {
+        width: 100%;
+        background-color: var(--blue);
+        @include DisplayFlex(row, center, center);
+        gap: 10px;
+        padding: 10px;
+
+    }
+
+
+    span {
+        font-weight: bolder;
+        color: var(--yellow);
+    }
+
+    img {
+        width: 100px;
+    }
+
+    .Line {
+        width: 2px;
+        height: 25px;
+        background-color: var(--yellow);
+        margin-top: 10px;
+    }
+
+    .euLideroLogo {
+        margin-top: 10px;
+        width: 140px;
+
+    }
+
+    .containerYellow {
+        p {
+            font-size: 14px;
+            text-align: center;
+            padding: 5px;
+
+        }
+
+        background-color: var(--yellow);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--blue);
+    }
+
+    25% {
+        color: var(--acqua);
+    }
+
+    50% {
+        color: var(--orange);
+    }
+
+    75% {
+        color: var(--yellow);
+    }
+
+    100% {
+        color: var(--blue);
+    }
+
+    /* Volta para o início */
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes suavidade {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (max-width:1140px) {
+
+    #ctaBtn {
+        font-size: 18px;
+    }
+
+    #home {
+        @include DisplayFlex(column, center, center);
+        padding: 40px 5% 10px 5%;
+        
+
+        article {
+            @include DisplayFlex(column, center, center);
+            text-align: center;
+
+            a {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .container-video {
+        padding: 0;
+        margin: 0;
+    }
+
+    iframe {
+        width: 90vw;
+    }
+
+
+
+    #form-section{
+
+        .container-impacts{
+            margin-bottom: 20px;
+        }
+    
+        #form{
+            padding: 0 10px;
+        }
+
+        .containerIntern{
+            gap: 40px;
+            @include DisplayFlex(column, center, center);
+        }
+    }
+
+
+    #section3{
+        @include DisplayFlex(column, center, center);
+
+        article{
+            @include DisplayFlex(column, center, center);
+            text-align: center;
+            margin-top: 15px;
+        }
+    }
+
+    #section4{
+       article{
+        @include DisplayFlex(column, center, center);
+       }
+        .containerWrap{
+            @include DisplayFlex(column, center, center);
+
+
+        }
+       
+        .containerInternArticle{
+            @include DisplayFlex(column, center, start);
+            
+            margin-top: 15px;
+            padding: 0 10px;
+
+            span{
+                padding: 0;
+            }
+        }
+    }
+
+    #section5{
+        @include DisplayFlex(column, center, center);
+
+        .containerWrap{
+            @include DisplayFlex(column, center, center);
+        }
+
+    }
+
+    #section6{
+  
+        a{
+            width: 90vw;
+        }
+    }
+}
