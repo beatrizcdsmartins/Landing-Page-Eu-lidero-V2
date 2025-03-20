@@ -188,7 +188,7 @@ header .euLideroLogo {
   gap: 20px;
 }
 #form-section .containerIntern .container-impacts .content-box-impact {
-  animation: suavidade 1s linear infinite;
+  animation: colorChange 4s linear infinite, shake 4s linear infinite;
   background-color: var(--acqua);
   border: 1px solid var(--blue);
   border-radius: 10px;
@@ -446,15 +446,38 @@ footer .containerYellow p {
     transform: scale(1);
   }
 }
-@keyframes suavidade {
+@keyframes colorChange {
   0% {
-    background-position: 0% 50%;
+    background-color: var(--orange);
+  }
+  25% {
+    background-color: var(--acqua);
   }
   50% {
-    background-position: 100% 50%;
+    background-color: var(--orange);
+  }
+  75% {
+    background-color: var(--yellow);
   }
   100% {
-    background-position: 0% 50%;
+    background-color: var(--orange);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 @media screen and (max-width: 1140px) {
