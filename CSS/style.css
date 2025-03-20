@@ -555,6 +555,7 @@ footer .containerYellow p {
     align-items: start;
     margin-top: 15px;
     padding: 0 10px;
+    max-width: 350px;
   }
   #section4 .containerInternArticle span {
     padding: 0;
