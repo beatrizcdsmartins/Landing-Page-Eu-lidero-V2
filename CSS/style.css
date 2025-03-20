@@ -188,7 +188,7 @@ header .euLideroLogo {
   gap: 20px;
 }
 #form-section .containerIntern .container-impacts .content-box-impact {
-  animation: colorChange 4s linear infinite, shake 4s linear infinite;
+  animation: colorChangeContainer 4s linear infinite, shake 4s linear infinite;
   background-color: var(--acqua);
   border: 1px solid var(--blue);
   border-radius: 10px;
@@ -446,7 +446,7 @@ footer .containerYellow p {
     transform: scale(1);
   }
 }
-@keyframes colorChange {
+@keyframes colorChangeContainer {
   0% {
     background-color: var(--orange);
   }

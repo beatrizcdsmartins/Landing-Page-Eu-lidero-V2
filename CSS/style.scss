@@ -201,7 +201,7 @@ header {
             gap: 20px;
 
             .content-box-impact {
-                animation: colorChange 4s linear infinite, shake 4s linear infinite;
+                animation: colorChangeContainer 4s linear infinite, shake 4s linear infinite;
                 background-color: var(--acqua);
                 border: 1px solid var(--blue);
                 border-radius: 10px;
@@ -507,7 +507,7 @@ footer {
     }
 }
 
-@keyframes colorChange {
+@keyframes colorChangeContainer {
     0% {
         background-color: var(--orange); 
     }
