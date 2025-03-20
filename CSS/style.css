@@ -167,7 +167,7 @@ header .euLideroLogo {
   align-items: center;
 }
 #form-section h2 {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   color: var(--white);
   text-align: center;
   padding: 60px 10px;
@@ -237,7 +237,7 @@ header .euLideroLogo {
   max-width: 500px;
 }
 #section3 article h2 {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   color: var(--blue);
 }
 #section3 article p {
@@ -276,11 +276,11 @@ header .euLideroLogo {
   gap: 30px;
 }
 #section4 article span {
-  font-size: 25px;
+  font-size: 20px;
   margin-left: -20px;
 }
 #section4 h2 {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   color: var(--white);
 }
 #section4 h2 span {
@@ -374,8 +374,9 @@ header .euLideroLogo {
 }
 #section6 h3 {
   color: var(--blue);
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   text-align: center;
+  padding: 0 10px;
 }
 #section6 a {
   width: 50%;

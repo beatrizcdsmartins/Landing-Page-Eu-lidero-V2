@@ -178,7 +178,7 @@ header {
 #form-section {
 
     h2 {
-        font-size: clamp(1rem, 3vw, 2rem);
+        font-size: clamp(1rem, 5vw, 2rem);
         color: var(--white);
         text-align: center;
         padding: 60px 10px;
@@ -260,7 +260,7 @@ header {
         max-width: 500px;
 
         h2 {
-            font-size: clamp(1rem, 3vw, 2rem);
+            font-size: clamp(1rem, 5vw, 2rem);
             color: var(--blue);
         }
 
@@ -300,14 +300,14 @@ header {
         gap: 30px;
 
         span {
-            font-size: 25px;
+            font-size: 20px;
             margin-left: -20px;
 
         }
     }
 
     h2 {
-        font-size: clamp(1rem, 3vw, 2rem);
+        font-size: clamp(1rem, 5vw, 2rem);
         color: var(--white);
 
         span {
@@ -413,8 +413,9 @@ header {
 
     h3 {
         color: var(--blue);
-        font-size: clamp(1rem, 3vw, 2rem);
+        font-size: clamp(1rem, 5vw, 2rem);
         text-align: center;
+        padding: 0 10px;
 
     }
 
